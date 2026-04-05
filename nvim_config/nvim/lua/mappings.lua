@@ -1,0 +1,1 @@
+/home/fllam3/Documents/repos/dotfiles/mappings.lua

@@ -1,0 +1,14 @@
+s -> 
+
+t -> toggle
+	n -> number
+	r -> relative number
+	/ -> comment
+
+n -> new
+	t -> terminal
+		a -> new tab
+		j -> down
+		k -> up
+		h -> left
+		l -> right
