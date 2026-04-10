@@ -69,7 +69,7 @@ local servers = {
 				},
 			},
 			inlayHints = {
-				enable = true;
+				enable = true,
 				typeHints = true,
 				chainingHints = true,
 				bindingModeHints = true,

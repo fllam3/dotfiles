@@ -3,7 +3,7 @@ if status is-interactive
 
 ## System
 
-alias sup="sudo apt update && sudo apt upgrade -y"
+alias sup="sudo apt update && sudo apt upgrade -y; brew update && brew upgrade"
 alias set_perf='echo performance | sudo tee /sys/devices/system/cpu/cpufreq/policy*/scaling_governor'
 alias set_save='echo powersave | sudo tee /sys/devices/system/cpu/cpufreq/policy*/scaling_governor'
 
@@ -14,7 +14,7 @@ alias paco="$HOME"/francinette/tester.sh
 alias mstest="/home/fllam3/42_minishell_tester/tester.sh"
 
 eval "$(pay-respects fish --alias fuck)"
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 
 export PATH="/home/fllam3/Documents/repos/42/core/tools/host:$PATH"
 set -gx PATH /home/fllam3/.local/funcheck/host $PATH
@@ -60,7 +60,7 @@ alias lg="lazygit"
 
 ## Paths
 
-alias fi="cd /home/fllam3/.config/fish && vim config.fish"
+alias fi="cd /home/fllam3/.config/fish && nvim config.fish"
 alias ft="cd /home/fllam3/Documents/repos/42/core && cd $argv"
 alias exam="cd /home/fllam3/Documents/repos/42/tools/practice/examshell"
 alias obs="cd /home/fllam3/Documents/repos/obsidian && ls"

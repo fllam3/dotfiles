@@ -8,6 +8,9 @@ return {
 	-- These are some examples, uncomment them if you want to see them work!
 	{
 		"neovim/nvim-lspconfig",
+		cmd = { "LspInfo", "LspStart", "LspStop", "LspRestart" },
+		event = "BufReadPost",
+		lazy = false,
 		config = function()
 			require "configs.lspconfig"
 		end,
