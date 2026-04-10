@@ -1,6 +1,3 @@
--- Minimal root_dir detector (expandable)
-local function get_root_dir()
-	return vim.fs.dirname(vim.fs.find({ ".git", "package.json", "pyproject.toml", "Cargo.toml" }, { upward = true })[1])
 end
 
 -- Check for executables across common Nix paths

@@ -6,9 +6,12 @@ if status is-interactive
 alias sup="sudo apt update && sudo apt upgrade -y"
 alias set_perf='echo performance | sudo tee /sys/devices/system/cpu/cpufreq/policy*/scaling_governor'
 alias set_save='echo powersave | sudo tee /sys/devices/system/cpu/cpufreq/policy*/scaling_governor'
+
+## Testing
+
 alias francinette="$HOME"/francinette/tester.sh
 alias paco="$HOME"/francinette/tester.sh
-alias lg="lazygit"
+alias mstest="/home/fllam3/42_minishell_tester/tester.sh"
 
 eval "$(pay-respects fish --alias fuck)"
 export EDITOR=/usr/bin/vim
@@ -52,6 +55,8 @@ alias gm="git merge"
 alias gl='git log'
 alias gp='git pull'
 alias gc="git checkout"
+
+alias lg="lazygit"
 
 ## Paths
 
