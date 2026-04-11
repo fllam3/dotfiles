@@ -4,7 +4,7 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
--- plugins
+-- plugins - lsp
 
 map("n", "<leader>ms","<cmd>Mason<CR>", { desc = "Mason"})
 
@@ -19,6 +19,20 @@ map("n", "<leader>wf","<cmd>w<CR>", { desc = "Write file"} )
 map("n", "<leader>we","<cmd>wq<CR>", { desc = "Write file and exit"} )
 map("n", "<leader>wa","<cmd>wa<CR>", { desc = "Write all"} )
 
+-- terminal
+
+map({"n", "t"}, "<M-i>", function()
+	require("nvchad.term").toggle({
+	pos = "float",
+	id = "floatTerm",
+	float_opts = {
+		width = 0.8,
+		height = 0.9,
+		row = 0.05,
+		col = 0.08,
+	},
+	})
+end, { desc = "toggle flaot term" })
 -- tabs
 map("n", "<leader>ta", "<cmd>tabnew<CR>", { desc = "New tab"})
 map("n", "<leader>tt", "<cmd>tabnew %<CR>", { desc = "Open current buf in new tab"})
@@ -53,7 +67,7 @@ map('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_wor
 })
 -- Telescope
 
---map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
+map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
 
 -- whichkey
 map("n", "<leader>hk", "<cmd>WhichKey <CR>", { desc = "whichkey all keymaps" })

@@ -15,18 +15,18 @@ local lazy_config = require "configs.lazy"
 
 -- require and setup the generator (example)
 -- IMPORTANT: require path is "custom.cpp_class_generator"
-require("custom.cpp_class_generator").setup({
-	header_extension = ".hpp", -- change to .hpp if you prefer
-	source_extension = ".cpp",
-	include_dir = ".",      -- "." means root directory (both files in project root)
-	src_dir = ".",          -- "." means root directory
-	use_pragma_once = true,
-	open_after_create = true,
-	open_in_vertical = true, -- ensure vertical split (default is true)
-	keymap = "<leader>cg",
-	create_cmd = "CppClass",
-}) -- load plugins
-
+-- require("custom.cpp_class_generator").setup({
+-- 	header_extension = ".hpp", -- change to .hpp if you prefer
+-- 	source_extension = ".cpp",
+-- 	include_dir = ".",      -- "." means root directory (both files in project root)
+-- 	src_dir = ".",          -- "." means root directory
+-- 	use_pragma_once = true,
+-- 	open_after_create = true,
+-- 	open_in_vertical = true, -- ensure vertical split (default is true)
+-- 	keymap = "<leader>cg",
+-- 	create_cmd = "CppClass"
+-- }) -- load plugins
+--
 require("lazy").setup({
 	{
 		"NvChad/NvChad",
@@ -38,6 +38,9 @@ require("lazy").setup({
 	{ import = "plugins" },
 }, lazy_config)
 
+
+vim.lsp.enable('lua_ls')
+vim.lsp.enable('pyright')
 -- require("configs.rust")
 
 -- load theme
