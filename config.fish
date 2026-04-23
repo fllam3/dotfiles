@@ -29,7 +29,6 @@ alias prod="protonvpn disconnect"
 
 alias c="cc -g -Wall -Wextra -Werror"
 alias a="./a.out"
-alias ms="./minishell"
 alias n="norminette ."
 alias mk="make"
 alias mkr="make re"
@@ -39,6 +38,9 @@ alias mkf="make fclean"
 ## Debugging 
 
 alias val="valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes --trace-children=yes"
+
+alias ms="./minishell"
+alias msv="valgrind  -s --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes --trace-children=yes --suppressions=ms_testing/ms.supp ./minishell"
 
 ## Git
 
@@ -60,7 +62,7 @@ alias lg="lazygit"
 
 ## Paths
 
-alias fi="cd /home/fllam3/.config/fish && nvim config.fish"
+alias fi="cd /home/fllam3/.config/fish"
 alias ft="cd /home/fllam3/Documents/repos/42/core && cd $argv"
 alias exam="cd /home/fllam3/Documents/repos/42/tools/practice/examshell"
 alias obs="cd /home/fllam3/Documents/repos/obsidian && ls"
