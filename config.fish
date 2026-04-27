@@ -3,6 +3,11 @@ if status is-interactive
 
 ## System
 
+function ali
+	echo "alias $argv[1]=\"$argv[2]\"" >> ~/.config/fish/config.fish
+	source ~/.config/fish/config.fish
+end
+
 alias sup="sudo apt update && sudo apt upgrade -y; brew update && brew upgrade"
 alias set_perf='echo performance | sudo tee /sys/devices/system/cpu/cpufreq/policy*/scaling_governor'
 alias set_save='echo powersave | sudo tee /sys/devices/system/cpu/cpufreq/policy*/scaling_governor'
@@ -38,6 +43,7 @@ alias mkf="make fclean"
 ## Debugging 
 
 alias val="valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes --trace-children=yes"
+alias valp="valgrind -s --tool=drd --tool=helgrind"
 
 alias ms="./minishell"
 alias msv="valgrind  -s --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes --trace-children=yes --suppressions=ms_testing/ms.supp ./minishell"
@@ -70,3 +76,4 @@ alias obs="cd /home/fllam3/Documents/repos/obsidian && ls"
 end
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
+alias p="./philo"
