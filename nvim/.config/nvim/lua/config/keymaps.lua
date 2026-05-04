@@ -7,16 +7,3 @@ local map = vim.keymap.set
 map("i", "jj", "<ESC>")
 map("i", "kk", "<ESC>")
 map({ "i", "v" }, "jk", "<ESC>")
-
-
--- local telescope = require("telescope.builtin")
--- map("n", "<leader><space>", function()
---   telescope.live_grep({
---     cwd = require("lazyvim.util").root(),
---   })
--- end, { desc = "Grep in project root" })
---
--- map({"i", "t"}, "<M-i>", function ()
---
---
--- end)

@@ -1,5 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
+
 require("toggleterm").setup({
 	size = 40,
 	open_mapping = [[<M-i>]],
@@ -16,6 +17,7 @@ require("toggleterm").setup({
 	},
 })
 
+vim.opt.shell= "/usr/bin/fish"
 vim.opt.expandtab = false
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4

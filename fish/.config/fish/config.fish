@@ -8,21 +8,18 @@ function ali
 	source ~/.config/fish/config.fish
 end
 
-alias sup="sudo apt update && sudo apt upgrade -y; brew update && brew upgrade"
-alias set_perf='echo performance | sudo tee /sys/devices/system/cpu/cpufreq/policy*/scaling_governor'
-alias set_save='echo powersave | sudo tee /sys/devices/system/cpu/cpufreq/policy*/scaling_governor'
+# alias sup="sudo apt update && sudo apt upgrade -y; brew update && brew upgrade"
 
 ## Testing
 
-alias francinette="$HOME"/francinette/tester.sh
-alias paco="$HOME"/francinette/tester.sh
-alias mstest="/home/fllam3/42_minishell_tester/tester.sh"
+# alias francinette="$HOME"/francinette/tester.sh
+# alias paco="$HOME"/francinette/tester.sh
+# alias mstest="/home/fllam3/42_minishell_tester/tester.sh"
 
-eval "$(pay-respects fish --alias fuck)"
-export EDITOR=/usr/bin/nvim
+# export EDITOR=/usr/bin/nvim
 
-export PATH="/home/fllam3/Documents/repos/42/core/tools/host:$PATH"
-set -gx PATH /home/fllam3/.local/funcheck/host $PATH
+# export PATH="/home/fllam3/Documents/repos/42/core/tools/host:$PATH"
+# set -gx PATH /home/fllam3/.local/funcheck/host $PATH
 
 alias q="exit"
 alias v="vim ."
@@ -75,5 +72,7 @@ alias obs="cd /home/fllam3/Documents/repos/obsidian && ls"
 
 end
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
 alias p="./philo"
+alias ssd='cd /var/run/media/fllam3/Intenso'
+alias rep="cd ~/Documents/repos/ && cd $argv"
