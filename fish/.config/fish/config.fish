@@ -1,5 +1,6 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
+end
 
 ## System
 
@@ -60,19 +61,45 @@ alias gm="git merge"
 alias gl='git log'
 alias gp='git pull'
 alias gc="git checkout"
-
 alias lg="lazygit"
 
-## Paths
+# Paths
 
-alias fi="cd /home/fllam3/.config/fish"
-alias ft="cd /home/fllam3/Documents/repos/42/core && cd $argv"
-alias exam="cd /home/fllam3/Documents/repos/42/tools/practice/examshell"
+function go
+   set base ""
+   switch $argv[1]
+       case rep
+           set base ~/Documents/code/repos/
+       case ft
+           set base ~/Documents/code/42/
+       case co
+           set base ~/Documents/code/repos/core/
+       case dot
+           set base ~/Documents/code/repos/dotfiles/
+	   case fi
+           set base ~/.config/fish/
+	   case ex
+		   set base ~/Documents/code/42/tools/practice/examshell
+	   case '*'
+		   echo "Unknown alias: $argv[1]"
+           return
+   end
+
+   if test -n "$argv[2]"
+       builtin cd $base/$argv[2]
+   else
+       builtin cd $base
+   end
+end
+
+
+# alias fi="cd /home/fllam3/.config/fish"
+# alias ft="cd /home/fllam3/Documents/repos/42/core0"
 alias obs="cd /home/fllam3/Documents/repos/obsidian && ls"
 
-end
 
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
 alias p="./philo"
 alias ssd='cd /var/run/media/fllam3/Intenso'
 alias rep="cd ~/Documents/repos/ && cd $argv"
+alias exam="cd ~/Documents/code/42/tools/practice/examshell"
