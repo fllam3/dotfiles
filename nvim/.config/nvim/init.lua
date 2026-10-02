@@ -1,5 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
+require("custom.cpp_class").setup()
 
 require("toggleterm").setup({
 	size = 40,

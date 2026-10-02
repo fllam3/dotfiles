@@ -128,6 +128,7 @@ end
 -- Set up command and keymap
 vim.api.nvim_create_user_command("Stdheader", M.stdheader, {})
 vim.api.nvim_set_keymap("n", "<F1>", ":Stdheader<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "uH", ":Stdheader<CR>", { noremap = true, silent = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
 	callback = M.update,

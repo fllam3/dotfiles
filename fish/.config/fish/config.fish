@@ -23,8 +23,8 @@ end
 # set -gx PATH /home/fllam3/.local/funcheck/host $PATH
 
 alias q="exit"
-alias v="vim ."
-alias nv="nvim ."
+# alias v="vim ."
+alias nv="nvim"
 alias proc="protonvpn connect"
 alias prod="protonvpn disconnect"
 
@@ -38,7 +38,9 @@ alias mkr="make re"
 alias mkc="make clean"
 alias mkf="make fclean"
 
-## Debugging 
+alias p="./philo"
+
+## Debugging
 
 alias val="valgrind -s --leak-check=full --show-leak-kinds=all --track-origins=yes --track-fds=yes --trace-children=yes"
 alias valp="valgrind -s --tool=drd --tool=helgrind"
@@ -68,18 +70,22 @@ alias lg="lazygit"
 function go
    set base ""
    switch $argv[1]
-       case rep
+       case repo
            set base ~/Documents/code/repos/
        case ft
            set base ~/Documents/code/42/
-       case co
+       case core
            set base ~/Documents/code/repos/core/
        case dot
            set base ~/Documents/code/repos/dotfiles/
-	   case fi
+	   case fish
            set base ~/.config/fish/
-	   case ex
+	   case exam
 		   set base ~/Documents/code/42/tools/practice/examshell
+	   case ssd
+		   set base /var/run/media/fllam3/Intenso
+		case -
+			set base -
 	   case '*'
 		   echo "Unknown alias: $argv[1]"
            return
@@ -95,11 +101,12 @@ end
 
 # alias fi="cd /home/fllam3/.config/fish"
 # alias ft="cd /home/fllam3/Documents/repos/42/core0"
-alias obs="cd /home/fllam3/Documents/repos/obsidian && ls"
+alias obsi="cd ~/Documents/repos/obsidian"
 
 
 # eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
-alias p="./philo"
-alias ssd='cd /var/run/media/fllam3/Intenso'
-alias rep="cd ~/Documents/repos/ && cd $argv"
-alias exam="cd ~/Documents/code/42/tools/practice/examshell"
+# alias ssd='cd /var/run/media/fllam3/Intenso'
+# alias rep="cd ~/Documents/repos/ && cd $argv"
+# alias exam="cd ~/Documents/code/42/tools/practice/examshell"
+alias a=a.out=""
+alias a="./a.out"
